@@ -7,11 +7,12 @@
   </head>
   <body>
     <script>
-      let n1 = 150;
-      let n2 = 377;
+      let n1 = +prompt("Enter first number ");
+      let n2 = +prompt("Enter second number ");
       let count = 0;
       let c1 = 0;
 
+      if(n1<n2){
       for (i = n1; i < n2; i++) {
         if (i % 2 == 0) {
           count++;
@@ -19,7 +20,18 @@
         c1++;
       }
       console.log(c1);
-      console.log("The number of even numbers between 150 and 377 are "+count);
+      console.log("The number of even numbers between",n1, "and",n2, "are "+count);
+    }
+    else{
+      for (i = n2; i < n1; i++) {
+        if (i % 2 == 0) {
+          count++;
+        }
+        c1++;
+      }
+      console.log(c1);
+      console.log("The number of even numbers between",n2, "and",n1, "are "+count);
+    }
     </script>
   </body>
 </html>
