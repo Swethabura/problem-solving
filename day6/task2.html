@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LCM of three numbers</title>
+  </head>
+  <body>
+    <script>
+
+      let n1 = +prompt("Enter the first number: ");
+      let n2 = +prompt("Enter the second number: ");
+      let n3 = +prompt("Enter the third number: ");
+
+      function gcd(a, b) {
+        let gcdValue = 0;
+        for (let i = 1; i <= Math.min(a, b); i++) {
+          if (a % i === 0 && b % i === 0) {
+            gcdValue = i;
+          }
+        }
+        return gcdValue;
+      }
+
+      function lcm(a, b) {
+        return (a * b) / gcd(a, b);
+      }
+
+      function lcmOfThreeNumbers(n1, n2, n3) {
+        const lcm1 = lcm(n1, n2);
+        const finalLcm = lcm(lcm1, n3);
+        return finalLcm;
+      }
+      console.log("LCM of",n1,",",n2,"and",n3,"is:",lcmOfThreeNumbers(n1, n2, n3));
+
+      //   let n1 = +prompt("Enter the first number ");
+      //   let n2 = +prompt("Enter the second number ");
+      //   let n3 = +prompt("Enter the third number ");
+      //   let gcd1 = 0;
+      //   let gcd2 = 0;
+
+      //   let min1 = Math.min(n1, n2);
+      //   let max1 = Math.max(n1, n2);
+      //   console.log(min1, max1);
+
+      //   for (i = 1; i <= min1; i++) {
+      //     if (n1 % i == 0 && n2 % i == 0) {
+      //       gcd1 = i;
+      //     }
+      //   }
+      //   let lcm1 = (n1 * n2) / gcd1;
+      //   console.log(lcm1);
+
+      //   let min2 = Math.min(lcm1, n3);
+      //   let max2 = Math.max(lcm1, n3);
+      //   console.log(min2, max2);
+
+      //   for (i = 1; i <= min2; i++) {
+      //     if (n1 % i == 0 && n2 % i == 0) {
+      //       gcd2 = i;
+      //     }
+      //   }
+      //   console.log(gcd2);
+      //   let lcm2 = (lcm1 * n3) / gcd2;
+      //   console.log(lcm2);
+    </script>
+  </body>
+</html>
