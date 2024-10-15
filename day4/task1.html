@@ -7,8 +7,8 @@
 </head>
 <body>
     <script>
-        let num1 = 1;
-        let num2 = 20;
+        let num1 = +prompt("Enter the first number in the range ");
+        let num2 = +prompt("Enter the second number in the range ");
         let larg;
 
         for(i=num1; i<num2; i++){
@@ -23,7 +23,7 @@
                 larg = i;
             }
         }
-        console.log("Largest Prime in the given range is ", larg);
+        console.log("Largest Prime in the range",num1,"&",num2, "is ", larg);
     </script>
     
 </body>
