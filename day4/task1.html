@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest Prime un the given Range</title>
+</head>
+<body>
+    <script>
+        let num1 = 1;
+        let num2 = 20;
+        let larg;
+
+        for(i=num1; i<num2; i++){
+            let fact = 0;
+            for(j=2; j<i; j++){
+                if(i%j==0){
+                    fact++;
+                    break;
+                }
+            }
+            if (fact==0){
+                larg = i;
+            }
+        }
+        console.log("Largest Prime in the given range is ", larg);
+    </script>
+    
+</body>
+</html>

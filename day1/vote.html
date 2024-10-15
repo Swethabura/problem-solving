@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eligiblity for vote</title>
+</head>
+<body>
+    <script>
+        var age = +prompt("Enter your age");
+
+        if(age===0 || age===""){
+            console.log("Sorry!!!");
+            console.log("Invalid input!!");
+        }    
+        else if(age<18){
+            console.log("OOPS!!!");
+            console.log("Your not eligible for Voting!!")
+        }
+        else
+            console.log("You are eligible for Voting!")
+    </script>
+    
+</body>
+</html>
