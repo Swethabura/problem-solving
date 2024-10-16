@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = [12, 3, 17, 15, 24, 18, 27, 9];
+
+      console.log(arr);
+
+      arr.sort(function (a, b) {
+        return a - b;
+      });
+      console.log("Sorted function ", arr);
+      console.log("Missing prime numbers are: ");
+
+      for (i = arr[0]; i < arr[arr.length - 1]; i++) {
+        isPrime = true;
+
+        if (i < 2) {
+          isPrime = false;
+        }
+        for (j = 2; j <= i / 2; j++) {
+          if (i % j == 0) {
+            isPrime = false;
+            break;
+          }
+        }
+        if (isPrime && !arr.includes(i)) {
+          console.log(i);
+        }
+      }
+    </script>
+  </body>
+</html>
