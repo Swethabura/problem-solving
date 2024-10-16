@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison of Arrays</title>
+</head>
+<body>
+    <script>
+        let arr1 = [1,2,3];
+        let arr2 = [1,2,3];
+
+        console.log(arr1);
+        console.log(arr2);
+        
+        function arrLength(arr){
+            let count =0;
+            for(i=0;arr[i]!=undefined;i++){
+                count++;
+            }
+            return count;
+        }
+        if(arrLength(arr1)===arrLength(arr2)){
+            let allEleSame = true;
+            for(let i=0; i<arrLength(arr1);i++){
+                if(arr1[i]==arr2[i]){
+
+                }
+                else{
+                    console.log("Elements in the both arrays are not same!!");
+                    allEleSame = false;
+                    break;
+                }
+            }
+            if(allEleSame){
+                console.log("Elements in the both arrays are same!!!");  
+            }
+        }else{
+            console.log("Arrays are of different lengths");
+        }
+       
+    </script>
+    
+</body>
+</html>

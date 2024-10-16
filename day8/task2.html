@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of max&min in array</title>
+</head>
+<body>
+    <script>
+        let arr = [12,15,52,23,7,5,48,6];
+        let min = arr[0];
+        let max = arr[0];
+
+        console.log(arr);
+
+        for(i=0;i<arr.length;i++){
+            if(arr[i]>max){
+                max = arr[i];
+            }
+            if(arr[i]<min){
+                min = arr[i];
+            }
+        }
+        console.log("Max value in the array", max);
+        console.log("Min value in the array", min);
+        console.log("Sum of min and max is",(max+min));
+    </script>
+    
+</body>
+</html>

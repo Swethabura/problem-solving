@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duplicate values in array</title>
+</head>
+<body>
+    <script>
+        let arr = [1,14,6,11,14,17,11,5,1,6];
+        nonRepeatArr = [];
+        dupArr = [];
+
+        console.log(arr);
+
+        for(i=0;i<arr.length;i++){
+            if(!nonRepeatArr.includes(arr[i])){
+                nonRepeatArr.push(arr[i])
+            }else{
+                dupArr.push(arr[i])
+            }
+        }
+        console.log("Array without duplicate values",nonRepeatArr)
+        console.log("Duplicate values of array",dupArr)
+    </script>
+    
+</body>
+</html>
