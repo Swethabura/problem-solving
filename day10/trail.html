@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let num = +prompt("Enter a prime number or a number:");
+
+      function primeCheck(num) {
+        if (num < 0) {
+          return "Enter the number properly!!";
+        } else if (num <= 1) {
+          // console.log();
+          return num + " is neither a prime nor a composite"; // Not prime
+        }
+        for (let i = 2; i <= num / 2; i++) {
+          if (num % i === 0) {
+            // break;
+            return num + " is not a prime"; // Not prime
+          }
+        }
+        return num + " is a prime"; // Is prime
+      }
+      console.log(primeCheck(num));
+
+      let nextPrime = num + 1;
+      while (nextPrime > 1 && !primeCheck(nextPrime)) {
+        nextPrime++;
+      }
+      if (nextPrime > 1) {
+        console.log("The next prime is", nextPrime);
+      } else {
+        console.log("There is no next prime.");
+      }
+      let prePrime = num - 1;
+      while (prePrime > 1 && !primeCheck(prePrime)) {
+        prePrime--;
+      }
+      if (prePrime > 1) {
+        console.log("The previous prime is", prePrime);
+      } else {
+        console.log("There is no previous prime.");
+      }
+    </script>
+  </body>
+</html>
