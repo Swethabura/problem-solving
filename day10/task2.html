@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reverse an array</title>
+  </head>
+  <body>
+    <script>
+      let arr = [2, 5, 8, 6, 7, 3, 5, 9, 1, 4, 3];
+      let start = 0;
+      let end = arr.length - 1;
+      console.log("Original Array: ",arr);
+      
+      while (start < end) {
+        [arr[start], arr[end]] = [arr[end], arr[start]];
+
+        start++;
+        end--;
+      }
+      console.log("Array after reversing: ",arr);
+    </script>
+  </body>
+</html>
