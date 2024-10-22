@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Left diagnal elements</title>
+  </head>
+  <body>
+    <script>
+      let arr = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+      ];
+      let prod = 1;
+
+      console.log("Array: ", arr);
+      console.log("Left Diagnal elements: ");
+      for (i in arr) {
+        for (j in arr) {
+          if (arr[i] == arr[j]) {
+            console.log(arr[i][j]);
+            prod *= arr[i][j];
+          }
+        }
+      }
+      console.log("Product of diagnal elements = ", prod);
+    </script>
+  </body>
+</html>
