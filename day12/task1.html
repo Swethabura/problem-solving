@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vowel & consonents count</title>
+  </head>
+  <body>
+    <script>
+      let str = "JavaScript";
+      let str2 = str.toUpperCase();
+      let vowelCount = 0;
+      let consCount = 0;
+      console.log("String: ", str);
+
+      for (i of str2) {
+        if (i == "A" || i == "E" || i == "I" || i == "O" || i == "U") {
+          vowelCount++;
+        } else consCount++;
+      }
+      console.log("Number of vowels: ", vowelCount);
+      console.log("Number of consonents: ", consCount);
+    </script>
+  </body>
+</html>

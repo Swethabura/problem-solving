@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lower & Upper case count</title>
+  </head>
+  <body>
+    <script>
+      let str = "JavaScript";
+      let arr = [];
+      let lowerCount = 0;
+      let upperCount = 0;
+
+      // First-way---->
+
+      // for(i in str){
+      //     arr.push(str.charCodeAt(i));
+      // }
+      //     console.log(arr);
+      // for(i of arr){
+      //     if(i<=90&&i>=65){
+      //         upperCount++
+      //     }
+      //     else
+      //         lowerCount++;
+      // }
+      // console.log("Lowercase count: ",lowerCount);
+      // console.log("Uppercase count: ",upperCount);
+
+
+      // Second-way ------>
+      
+      console.log("String: ",str)
+      for (i of str) {
+        // console.log(i==i.toUpperCase())
+        if (i === i.toUpperCase()) {
+          upperCount++;
+        } else lowerCount++;
+      }
+      console.log("Lower case count: ",lowerCount);
+      console.log("Upper case count: ",upperCount);
+    </script>
+  </body>
+</html>

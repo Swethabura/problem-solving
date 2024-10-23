@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Even-Index Vowels</title>
+  </head>
+  <body>
+    <script>
+      let str = "My name is Swetha";
+      let str2 = str.toUpperCase();
+      console.log("String: ",str);
+      console.log("Vowels in even indexes:");
+      for (i in str2) {
+        if (i % 2 == 0) {
+          if (
+            str2[i] == "A" ||
+            str2[i] == "E" ||
+            str2[i] == "I" ||
+            str2[i] == "O" ||
+            str2[i] == "U"
+          ) {
+            console.log(str[i]);
+            // console.log(str2[i]);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
