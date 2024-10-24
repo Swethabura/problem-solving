@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Case conversion in String</title>
+  </head>
+  <body>
+    <script>
+      let str = "JaVA scRipT";
+      let str2 = "";
+
+      console.log("String:", str);
+      for (i of str) {
+        if (i == i.toUpperCase()) {
+          str2 += i.toLowerCase();
+        } else {
+          str2 += i.toUpperCase();
+        }
+      }
+      console.log("String after converting case: ", str2);
+    </script>
+  </body>
+</html>

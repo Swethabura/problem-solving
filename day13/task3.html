@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arranging Upper & lower cases</title>
+  </head>
+  <body>
+    <script>
+      let str = "JscrAViptA";
+      console.log("String before:", str);
+
+      //First way ---->
+
+      // let lower = "";
+      // let upper = "";
+
+      // for(i of str){
+      //     if(i===i.toUpperCase()){
+      //         upper+=i;
+      //     }else{
+      //         lower+=i;
+      //     }
+      // }
+      // console.log(upper+lower);
+
+
+     //   Second way ------->
+
+      let upper = [...str].filter((i) => i === i.toUpperCase()).join("");
+      let lower = [...str].filter((i) => i !== i.toUpperCase()).join("");
+
+      console.log("String after:", upper + lower);
+    </script>
+  </body>
+</html>

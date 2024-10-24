@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trim End method</title>
+  </head>
+  <body>
+    <script>
+      let str = "   hello world    ";
+      let str2 = "";
+      let isSpace = true;
+
+      console.log("String:", str, "with leading and trailing spaces");
+      for (i = str.length - 1; i >= 0; i--) {
+        if (str[i] == " " && isSpace) {
+        } else {
+          str2 = str[i] + str2;
+          isSpace = false;
+        }
+      }
+      console.log("String:", str2, ":After removing trailing spaces");
+    </script>
+  </body>
+</html>
