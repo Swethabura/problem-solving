@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reversing Pattern</title>
+  </head>
+  <body>
+    <script>
+      let count = 25;
+      for (i = 1; i <= 5; i++) {
+        s = "";
+        for (j = 1; j <= 5; j++) {
+          if (count < 10) {
+            s += "0" + count + " ";
+            count--;
+          } else {
+            s += count + " ";
+            count--;
+          }
+        }
+        console.log(s);
+      }
+    </script>
+  </body>
+</html>
