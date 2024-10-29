@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lowercase pattern</title>
+  </head>
+  <body>
+    <script>
+      let num = 5;
+
+      for (i = 1; i <= num; i++) {
+        let code = 97;
+        res = "";
+        for (sp = num - i; sp >= 1; sp--) {
+          res += " ";
+        }
+        for (j = 0; j < i; j++) {
+          res += String.fromCharCode(code) + " ";
+          code++;
+        }
+        console.log(res);
+      }
+    </script>
+  </body>
+</html>
