@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pattern 'T'</title>
+  </head>
+  <body>
+    <script>
+      let num = 5;
+      let mid = Math.ceil(num / 2);
+
+      for (i = 1; i <= num; i++) {
+        res = "";
+        for (j = 1; j <= num; j++) {
+          if (i == 1 || j == mid) {
+            res += "*" + " ";
+          } else {
+            res += "  ";
+          }
+        }
+        console.log(res);
+      }
+    </script>
+  </body>
+</html>
