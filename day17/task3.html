@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hallow pattern</title>
+  </head>
+  <body>
+    <script>
+      let num = 5;
+
+      for (i = num; i >= 1; i--) {
+        res = "";
+        for (j = 1; j <= num; j++) {
+          if (i == num || j == num || i + j == num + 1) {
+            res += "* ";
+          } else {
+            res += "  ";
+          }
+        }
+        console.log(res);
+      }
+    </script>
+  </body>
+</html>

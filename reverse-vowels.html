@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function reverseVowels(word) {
+    const vowels = 'aeiouAEIOU';
+    let vowelPositions = [];
+    let vowelsArray = [];
+
+    // Collect vowels and their positions
+    for (let i = 0; i < word.length; i++) {
+        if (vowels.includes(word[i])) {
+            vowelPositions.push(i);
+            vowelsArray.push(word[i]);
+        }
+    }
+
+    // Reverse the collected vowels
+    vowelsArray.reverse();
+
+    // Convert the word to an array for easy manipulation
+    let wordArray = word.split('');
+
+    // Replace the original vowels with the reversed ones
+    vowelPositions.forEach((position, index) => {
+        wordArray[position] = vowelsArray[index];
+    });
+
+    // Join the array back into a string
+    return wordArray.join('');
+}
+
+// Example usage:
+const result = reverseVowels("hello");
+console.log(result); // Output: "holle"
+
+    </script>
+</body>
+</html>

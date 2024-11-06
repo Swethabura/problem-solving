@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>M pattern</title>
+  </head>
+  <body>
     <script>
-        let num = 5;
+      let num = 5;
 let pattern = "";   
 let mid = Math.ceil(num/2);
-if (num > 1) {      //no star pattern for 0 or negative numbers.
-    for (let i = 1; i <=num; i++) {    //first 'for loop' for horizontal lines 
-        for (let j = 1; j <= (num); j++) {      //second 'for loop' to add * to pattern string
-            if (j==1 || j==num || (i==mid && j==mid)||j==(num-i+1)) {     //condition to add * to pattern string
-                pattern += "* ";    //adding * to pattern string
+if (num > 1) { 
+    for (let i = 1; i <=num; i++) {    
+        for (let j = 1; j <= (num); j++) {      
+            if (j==1 || j==num || (i==mid && j==mid)||(i<mid && i==j)||(i<mid && i+j==num+1)){ 
+                pattern += "* ";    
             } else {
-                pattern += "  ";  //adding spaces between * to pattern string to make it crossed
+                pattern += "  ";  
             }
         }
-        pattern += "\n";    //new line after row completion
+        pattern += "\n";    
     }
-    console.log(pattern);   //printing star to console
+    console.log(pattern);   
 }
 else {
     pattern = "Number must be greater than 1 to print star pattern.";
 }
     </script>
-</body>
+  </body>
 </html>
