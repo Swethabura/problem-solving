@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highest marks</title>
+</head>
+<body>
+    <script>
+        let students = [
+            {
+                id:1,
+                name:"harry",
+                marks:{
+                    te:75,
+                    hi:68,
+                    en:73
+                } 
+            },
+            {
+                id:2,
+                name:"ron",
+                marks:{
+                    te:86,
+                    hi:79,
+                    en:74
+                } 
+            },
+            {
+                id:4,
+                name:"harry",
+                marks:{
+                    te:89,
+                    hi:54,
+                    en:69
+                } 
+            }
+        ];
+        
+        console.log("Object",students); 
+        let highestMarks = 0;
+        let name = "";
+
+        for(i of students){
+            if(highestMarks<i.marks.en){
+                name = i.name;
+                highestMarks = i.marks.en;
+            }
+        }
+        console.log(name,"Has the highest marks in english.")
+    </script>
+    
+</body>
+</html>

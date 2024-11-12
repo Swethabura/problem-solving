@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highest Salary</title>
+</head>
+<body>
+    <script>
+        let employees = [
+            {
+                name:"varun",
+                emplyeId:1,
+                salary:25000
+            },
+            {
+                name:"megha",
+                employeId:2,
+                salary:27000
+            },
+            {
+                name:"charlie",
+                employeId:3,
+                salary:23000
+            }
+        ];
+        console.log("Object:", employees);
+
+        let name = "";
+        let highSalary=0;
+        for(i of employees){
+            if(i.salary>highSalary){
+                name = i.name;
+                highSalary=i.salary;
+            }
+            
+        }
+        console.log("The employee who has the Highest salary is",name);
+        
+
+    </script>
+    
+</body>
+</html>
